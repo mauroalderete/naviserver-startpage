@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "titleFont";
+  src: url("../font/LemonMilkLight-owxMq.otf");
+}
+
 body {
   width: 100vw;
   height: 100vh;
