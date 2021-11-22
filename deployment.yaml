@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: naviserver-startpage
+spec:
+  replicas: 1
+  containers:
+  - name: naviserver-startpage
+    image: rayquen/naviserver-startpage:latest
+    ports:
+    - containerPort: 80
