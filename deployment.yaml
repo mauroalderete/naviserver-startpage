@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: naviserver-startpage
+spec:
+  selector:
+    matchLabels:
+      app: naviserver-startpage-label
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: naviserver-startpage-label
+    spec:
+      containers:
+      - name: naviserver-startpage
+        image: rayquen/naviserver-startpage:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: naviserver-startpage-service
+spec:
+  selector:
+    app: naviserver-startpage-label
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    name: http
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: http-ingress
+spec:
+  rules:
+  - host: "navi.wired"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: naviserver-startpage-service
+            port:
+              number: 80
