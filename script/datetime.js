@@ -25,6 +25,9 @@ function setDate() {
     const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
+    const weekdays = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"]
+
     month = monthNames[month];
-    document.getElementById("iddate").innerHTML = (day + ". " + month);
+    wday = weekdays[date.getDay()];
+    document.getElementById("iddate").innerHTML = wday + " " + day + ". " + month;
 }
