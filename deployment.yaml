@@ -3,9 +3,17 @@ kind: Deployment
 metadata:
   name: naviserver-startpage
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   replicas: 1
-  containers:
-  - name: naviserver-startpage
-    image: rayquen/naviserver-startpage:latest
-    ports:
-    - containerPort: 80
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: naviserver-startpage
+        image: rayquen/naviserver-startpage:latest
+        ports:
+        - containerPort: 80
