@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "titleFont";
+  src: url("../font/LemonMilkLight-owxMq.otf");
+}
+
+:root {
+  --background: #002b36;
+  --text: #ffffff;
+  --secondarytext: #fefefe;
+  --italics: #0e1625;
+  --opaqueBackground: rgb(255, 255, 255, 0.7);
+  --opaqueBackground: #0e1625;
+  --opaqueBackground: #ffffff;
+  --border: #aca59a;
+  --feedborder: #deb818;
+  --feedborder: #6f1519;
+  --quote-color: #002b36;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: gray;
+  font-family: Hind;
+  font-weight: 300;
+}
+
+h1 {
+  margin: 0;
+}

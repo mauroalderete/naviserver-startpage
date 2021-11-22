@@ -1,0 +1,38 @@
+.searchbox {
+    height: 30px;
+    border-radius: 1em;
+    background-color: white;
+    opacity: 0.66;
+    margin-bottom: 0.5em;
+    text-align: right;
+  }
+  
+  #searchbar {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    background-color: red;
+  
+    font-size: 10px;
+    outline: none;
+    background: none;
+  
+    font-size: 10pt;
+    color: var(--quote-color);
+    line-height: 1em;
+    padding-left: 3em;
+  }
+  
+  .icon {
+    height: 17px;
+    width: 17px;
+    border: none;
+    background-image: url("../img/loupe.svg");
+    background-size: 100%;
+  
+    margin-top: -25px;
+    margin-left: 0.5em;
+  
+    float: left;
+  }
