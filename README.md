@@ -22,7 +22,7 @@ This startpage show a random background fantasy images, with a digital clock, a 
 
 ## 2. Preview
 
-![preview](doc/preview/preview1.png)
+![preview](doc/preview/preview.png)
 
 ## 3. Build
 
