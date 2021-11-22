@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 20211122 - Release v1.0.0
+
+First main version of project. Include a start page website prepared to run on nginx server. Use a Dockerfile to build image and a kubernetes deployment file to implement this solution in *Navi*.
+
 # 20211122 - sketch and deploy process
 
 I make a simple website in the src folder that implements a homepage in the main naviservers domain
