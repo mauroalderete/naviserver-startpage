@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# 20211122 - Hotfix v1.0.1
+
+The image used to display the preview screenshot has the extension in uppercase. Whereas, the reference in the readme file looks for the file named in lowercase.
+When I change the name, Windows does not respond effectively, because its file system does not handle case sensitivity.
+So, I had to change the full name for everything to work fine.
+
 # 20211122 - Release v1.0.0
 
 First main version of project. Include a start page website prepared to run on nginx server. Use a Dockerfile to build image and a kubernetes deployment file to implement this solution in *Navi*.
