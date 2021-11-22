@@ -25,7 +25,11 @@
   </head>
   <body>
     <!-- Bakcground fullscreen -->
-    <img id="background" class="background" src="https://unsplash.it/1920/1080?random" />
+    <img
+      id="background"
+      class="background"
+      src="https://unsplash.it/1920/1080?random"
+    />
 
     <!-- Datetime panel -->
     <div class="datebox">
@@ -33,7 +37,38 @@
       <h1 id="iddate" class="date"></h1>
     </div>
 
+    <!-- Forecast panel -->
+    <div id="idforecast" class="forecastbox">
+      <a
+        class="weatherwidget-io"
+        href="https://forecast7.com/es/n34d51n58d68/villa-de-mayo/"
+        data-label_1="VILLA DE MAYO"
+        data-label_2="PRONOSTICO"
+        data-theme="white"
+        >VILLA DE MAYO PRONOSTICO</a
+      >
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://weatherwidget.io/js/widget.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, "script", "weatherwidget-io-js");
+
+        // auto-refresh weather
+        setInterval(function () {
+          var iframe_weather = document.getElementsByTagName("iframe")[0]; // EXPECTING weather to be the only iframe on the page
+          iframe_weather.src = iframe_weather.src;
+        }, 1000 * 60 * 5); // 5 mins
+      </script>
+    </div>
+
     <script src="./script/datetime.js"></script>
+    <script src="./script/forecast.js"></script>
     <script src="./script/main.js"></script>
   </body>
 </html>
